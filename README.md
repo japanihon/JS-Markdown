@@ -1,2 +1,3 @@
-# JS-Markdown
-JS Anotaciones en Formato Markdown
+# JS Markdown
+
+## JS Anotaciones en Formato Markdown
