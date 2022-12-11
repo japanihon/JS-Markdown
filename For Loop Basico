@@ -1,0 +1,44 @@
+## console.log("Repeticion 1")
+
+* Necesitamos contar el numero de repeticiones de 1 a 10
+
+For loop tiene 3 partes
+
+Parte 1)
+
+ Parte inicial del contador -> let rep = 1
+
+En que posicion el for empieza a contar
+
+Parte 2)
+
+Condicion logica que evalua antes de cada iteracion de ciclo -> rep <= 10;
+Esta condicion va a ser evaluada antes de cada iteracion del ciclo
+
+Si la condicion es true -> Ciclo Continua 
+Si la condicion es false -> Ciclo Se Detiene
+
+Parte 3) - Contador
+
+Aumentar el contador despues de cada iteracion -> rep++
+Aqui aumentando el contador en 1
+
+
+Parte Final - Luego de Esto agregamos el codigo que queremos que se repita
+
+for(let rep = 1; rep <= 10; rep++) {
+console.log(`Repeticion ${rep}`)
+}
+
+Resultado: 
+
+'Repeticion 1'
+'Repeticion 2'
+'Repeticion 3'
+'Repeticion 4'
+'Repeticion 5'
+'Repeticion 6'
+'Repeticion 7'
+'Repeticion 8'
+'Repeticion 9'
+'Repeticion 10'
