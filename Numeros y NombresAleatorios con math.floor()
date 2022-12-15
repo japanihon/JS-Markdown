@@ -1,0 +1,18 @@
+// Funcion Math Randon con Nombres //
+
+
+const nombres = ["Mario" , "Maria", "Luigi", "Bowser", "Honguito" , "Yoshi", "Tortuguita"]
+
+
+const choosePlayer = nombres[Math.floor(nombres.length * Math.random())]
+
+
+console.log(choosePlayer)
+
+
+// Funcion Math Randon con Numeros //
+
+const numeroRandom = Math.floor(100 * Math.random())
+
+
+console.log(numeroRandom)
