@@ -1,0 +1,30 @@
+------- HTML
+
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1 id='titulo'>Hello world</h1>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
+
+------- JS
+
+
+(function () {
+const header = document.querySelector('h1');
+ header.style.color = 'red';
+ })();
+
+
+
+const titulos = document.getElementById('titulo')
+
+document.addEventListener('click',  function(){
+    titulo.style.color = 'blue'
+})
