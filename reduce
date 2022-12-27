@@ -1,0 +1,92 @@
+reduce() - Snowball effect
+
+![Captura de pantalla 2022-12-27 a la(s) 12 59 15](https://user-images.githubusercontent.com/77374408/209736363-882d97d1-c975-4d53-a221-74f510753bcb.jpg)
+
+
+Reduce Method: Retorna todos los elementos en un solo valor
+
+
+
+-----------
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+
+------ Agregando el valor actual (cur) al acumulador (acc)
+
+----------- accumulator -> SNOWBALL
+
+1er parametro (acc) --> Es el acumulador, que acumula los valores que 
+                        queremos retornar
+
+2do parametro (cur) --> Es el elemento actual -- value 
+
+3er parametro (i) --> Es el indice
+
+4to parametro (arr) --> Es el array
+
+const balance = movements.reduce(function (acc, cur, i, arr) {
+console.log(`Indice ${i}: Acumulador: ${acc} Curent Value: ${cur}`);
+return acc + cur;
+}, 0); --> Le indicamos que empieza a contar desde 0 (Initial Value)
+
+Iteracion: 
+
+'Indice 0: Acumulador: 0 Curent Value: 200'
+'Indice 1: Acumulador: 200 Curent Value: 450'
+'Indice 2: Acumulador: 650 Curent Value: -400'
+'Indice 3: Acumulador: 250 Curent Value: 3000'
+'Indice 4: Acumulador: 3250 Curent Value: -650'
+'Indice 5: Acumulador: 2600 Curent Value: -130'
+'Indice 6: Acumulador: 2470 Curent Value: 70'
+'Indice 7: Acumulador: 2540 Curent Value: 1300'
+
+
+
+console.log(balance) // 3840 -> Es la suma de todos los valores previos
+
+-----------------------------------------------------------------------
+Agregando el valor actual (cur) al acumulador (acc) en Arrow Function =>
+-----------------------------------------------------------------------
+
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
+
+console.log(balance) // 3840 -> Es la suma de todos los valores previos
+
+
+-----------------------------------------------------------------------
+Mismo planteo usando for of
+-----------------------------------------------------------------------
+
+let balance2 = 0;
+
+for (const mov of movements) balance2 += mov;
+
+console.log(balance2) // 3840
+
+-----------------------------------------------------------------------
+Maximum value
+-----------------------------------------------------------------------
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const max = movements.reduce((acc, mov) => {
+  if (acc > mov) return acc; -> Si el acumulador es mayor que el elemento, 
+                                devuelve ese valor (acc)
+
+  else return mov; -> Si no devuelve el elemento (mov)
+
+}, movements[0]); ---> Que empieze a contar desde el indice 0
+
+
+console.log(max) // 3000
+
+
+-----------------------------------------------------------------------
+Maximum value con Arrow Function =>
+-----------------------------------------------------------------------
+
+const max = movements.reduce((acc, mov) => (acc > mov) ? acc : mov , 0);
+
+
+console.log(max) // 3000
